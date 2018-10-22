@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Executing Forms</title>
+  </head>
+  <body>
+
+    <h1>Here are we executing our Forms :</h1>
+    <div class="container">
+      <form class="" method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" name="" value="Submit">
+      </form>
+
+    </div>
+
+
+  </body>
+</html>

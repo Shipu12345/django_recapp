@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% extends 'Sec_App/base.html' %}
+{% load staticfiles %}
+
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Banks Review</title>
+  </head>
+  <body>
+
+    {% block body_block %}
+
+
+    <h1>Here is a list of all Customers of Banks</h1>
+    <div class="">
+
+      {% if cus_list %}
+      <table>
+        <thead>
+          <th>Customer Name</th>
+          <th>Customer ID</th>
+        </thead>
+        {% for i in cus_list %}
+        <tr>
+          <td>{{ i.Cus_Name }}</td>
+          <td>{{ i.Cus_ID }}</td>
+        </tr>
+        {% endfor %}
+
+      </table>
+          {% else %}
+          <h2>Sorry !There is no list found!!</h2>
+        {% endif %}
+
+    </div>
+
+
+
+    {% endblock %}
+
+
+
+  </body>
+</html>
